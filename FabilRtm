@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FabielzXD | COMMUNITY</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+      font-weight: bold;
+      border-bottom: 1px solid #333;
+    }
+
+    nav a {
+      color: #00adb5;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    header {
+      padding: 1rem;
+      background-color: #1f1f1f;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .container {
+      position: relative;
+      padding: 1rem;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .card {
+      min-width: 250px;
+      background-color: #2a2a2a;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #00adb5;
+    }
+
+    .card p {
+      color: #ccc;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+      background: #1f1f1f;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background: #444;
+      border-radius: 4px;
+    }
+
+    .scroll-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+    }
+
+    .scroll-buttons button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .scroll-buttons button:hover {
+      background-color: #555;
+    }
+
+    .contact-form {
+      padding: 2rem;
+      background-color: #1c1c1c;
+      margin: 2rem 1rem;
+      border-radius: 10px;
+    }
+
+    .contact-form h2 {
+      color: #00adb5;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      background-color: #2a2a2a;
+      border: none;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .contact-form button {
+      padding: 0.75rem 1.5rem;
+      background-color: #00adb5;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact-form button:hover {
+      background-color: #007a87;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #1f1f1f;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* Animasi masuk */
+    .animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Tombol WhatsApp mengambang */
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .wa-float:hover {
+      background-color: #20c35c;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#produk">Produk</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <header id="beranda" class="animate">
+    SELAMAT DATANG DI FabielzXD| COMMUNITY 
+  </header>
+
+  <div class="container animate" id="produk">
+    <div class="scroll-buttons">
+      <button onclick="scrollLeft()">âŸµ Geser Kiri</button>
+      <button onclick="scrollRight()">Geser Kanan âŸ¶</button>
+    </div>
+
+    <div class="scroll-container" id="scrollContainer">
+      <div class="card animate">
+        <h3>Produk A</h3>
+        <p>Real Trading Money ( RTM ).</p>
+      </div>
+      <div class="card animate">
+        <h3>Produk B</h3>
+        <p>Racik Modpack Gta Samp.</p>
+      </div>
+      <div class="card animate">
+        <h3>Produk C</h3>
+        <p>Bergabung Dengan Grup Publik Saya Untuk Mendapatkan Ilmu Tentang SAMP.</p>
+      </div>
+      <div class="card animate">
+        <h3>Produk D</h3>
+        <P>Ikuti Saluran Saya Untuk Mendapatkan Bermacam Macam Mod SAMP.</p>
+      </div>
+      <div class="card animate">
+        <h3>Produk E</h3>
+        <p>Dan Lain Lain, Pm Wa Saya, Ketuk hubungi di kanan bawah.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form animate" id="kontak">
+    <h2>Hubungi Kami</h2>
+    <form>
+      <input type="text" name="nama" placeholder="Nama Anda" required />
+      <input type="email" name="email" placeholder="Email Anda" required />
+      <textarea name="pesan" rows="4" placeholder="Pesan Anda" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <!-- Tombol WhatsApp biasa -->
+  <div style="text-align: center; margin-bottom: 2rem;" class="animate">
+    <a href="https://wa.me/6288211014609" target="_blank"
+       style="display: inline-block; background-color: #25D366; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: bold;">
+      ðŸ’¬ Hubungi via WhatsApp
+    </a>
+  </div>
+
+  <footer class="animate">
+    &copy; 2025 Bisnis Kami. Semua hak dilindungi.
+  </footer>
+
+  <!-- Tombol WhatsApp Mengambang -->
+  <a href="https://wa.me/6288211014609" class="wa-float" target="_blank">
+    ðŸ’¬ WhatsApp Kami
+  </a>
+
+  <script>
+    const container = document.getElementById('scrollContainer');
+
+    function scrollLeft() {
+      container.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      container.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+
+    // Scroll otomatis
+    setInterval(() => {
+      container.scrollBy({ left: 250, behavior: 'smooth' });
+    }, 4000);
+
+    // Animasi saat elemen muncul
+    const animElements = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
